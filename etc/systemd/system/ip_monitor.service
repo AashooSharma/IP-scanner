@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto IP Sender for Raspberry Pi
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/auto_ip_sender.py
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
